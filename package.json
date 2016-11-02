@@ -1,0 +1,26 @@
+{
+  "name": "flask-gulp-react-boilerplate",
+  "version": "1.0.0",
+  "description": "Flask Gulp React Boilerplate",
+  "main": "./server.js",
+  "homepage": "https://github.com/benpink/flask-gulp-react-boilerplate",
+  "author": "Ben Pinkerton",
+  "license": "MIT",
+  "scripts": {
+    "start": "echo '=> starting' && python app.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benpink/flask-gulp-react-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benpink/flask-gulp-react-boilerplate/issues"
+  },
+  "dependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1"
+  }
+}
