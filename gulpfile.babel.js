@@ -1,3 +1,5 @@
+/* eslint-disable global-require, arrow-body-style */
+
 import del from 'del';
 import eslint from 'gulp-eslint';
 import gulp from 'gulp';
@@ -12,10 +14,10 @@ const dirs = {
   dest: './static'
 };
 
-let webpackConfigPath = './webpack.dev.config.js';
+let webpackConfig = require('./webpack.dev.config.js');
 
 if (process.env.NODE_ENV === 'production') {
-  webpackConfigPath = './webpack.prod.config.js';
+  webpackConfig = require('./webpack.prod.config.js');
 }
 
 // Delete dest dir
@@ -41,7 +43,7 @@ gulp.task('sass', () => {
 
 gulp.task('jsx', () => {
   return gulp.src(`${dirs.src}/js/index.jsx`)
-    .pipe(webpack(require(webpackConfigPath)))
+    .pipe(webpack(webpackConfig))
     .pipe(gulp.dest(`${dirs.dest}/js`));
 });
 
