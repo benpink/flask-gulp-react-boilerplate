@@ -12,3 +12,6 @@ npm-debug.log
 # Public asset dir
 # Dir and files are build from asset compilation (gulp)
 static
+
+# Local settings
+settings_local.py

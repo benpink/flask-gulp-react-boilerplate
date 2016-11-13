@@ -1,8 +1,8 @@
 import os
-from flask import Flask, request, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
-app.config['DEBUG'] = os.environ.get('HEROKU') is None
+app.config.from_object('settings')
 
 @app.route("/")
 def login():
