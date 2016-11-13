@@ -10,8 +10,8 @@ import sourcemaps from 'gulp-sourcemaps';
 import webpack from 'webpack-stream';
 
 const dirs = {
-  src: './src',
-  dest: './static'
+  src: 'src',
+  dest: 'static'
 };
 
 let webpackConfig = require('./webpack.dev.config.js');
@@ -48,7 +48,7 @@ gulp.task('jsx', () => {
 });
 
 gulp.task('lint', () => {
-  return gulp.src(['src/**/*.jsx', '!node_modules/**'])
+  return gulp.src('src/**/*.jsx')
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -56,7 +56,7 @@ gulp.task('lint', () => {
 
 // Watch tasks
 gulp.task('watch', () => {
-  gulp.watch(`${dirs.src}/images/*`, ['images']);
+  gulp.watch(`${dirs.src}/images/**/*`, ['images']);
   gulp.watch(`${dirs.src}/**/*.scss`, ['sass']);
   gulp.watch(`${dirs.src}/**/*.jsx`, ['jsx']);
 });
