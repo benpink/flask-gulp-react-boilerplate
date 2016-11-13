@@ -3,5 +3,9 @@
 {% block header_links %}{% endblock %}
 
 {% block content %}
-    <h1>Hello World!</h1>
+    <div id="app-root" />
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 {% endblock %}

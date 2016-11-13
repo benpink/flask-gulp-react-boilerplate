@@ -9,9 +9,6 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
-# Bower compontent src
-bower_components
-
 # Public asset dir
 # Dir and files are build from asset compilation (gulp)
-public
+static
