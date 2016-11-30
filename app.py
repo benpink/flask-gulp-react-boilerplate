@@ -1,8 +1,11 @@
 import os
 from flask import Flask, render_template
+from flask_compress import Compress
 
 app = Flask(__name__)
 app.config.from_object('settings')
+
+Compress(app)
 
 @app.route("/")
 def login():
